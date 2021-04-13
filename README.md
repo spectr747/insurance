@@ -1,19 +1,27 @@
 # insurance
 Deployment ML model using Flask and Docker
 
-Клонирование репозитория
+1. Клонирование репозитория
+```
 git clone https://github.com/spectr747/insurance.git
-Переход в рабочий каталог
+```
+2. Переход в рабочий каталог
+```
 cd deploy
-Запуск docker
+```
+3. Запуск docker
+```
 docker build -t insurance:1.0 
 docker run -p 5000:3000 insurance:1.0
-
-Запуск Postman.
+```
+4. Запуск Postman.
+```
 localhost:5000/predict
-Добавить в Body (raw json):
+```
+5. Добавить в Body (raw json):
 тестовый набор значений из файла notebook/data/test-data.json
 Например:
+```
 {
   "data": [
     {
@@ -47,18 +55,22 @@ localhost:5000/predict
     }
   ]
 }
-
+```
 Нажимаем Send.
 
 В окне Response появится ответ: 
+```
 {
 	'output':{
 		'result': 'Принято'
 	}
 }
+```
 или
+```
 {
 	'output':{
 		'result': 'Отказ'
 	}
 }
+```
