@@ -1,5 +1,4 @@
-# insurance
-Deployment ML model using Flask and Docker
+# Deployment ML model using Flask and Docker
 
 1. Клонирование репозитория
 ```
